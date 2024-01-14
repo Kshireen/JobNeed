@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% block title %}Job List {% endblock title %}
+{% block body %}
+ {% comment %} aaos aanimation on scroll cnd{% endcomment %}
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0"  role="alert">
+    <strong>{{ message }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %}
+  {% endif %}
+{% comment %} Heading {% endcomment %}
+<section class="job_list">
+    <div class="jon_list_bg_img">
+        <h1 data-aos="fade-up">JOB LIST</h1>
+    </div>
+</section>
+{% comment %} job listing {% endcomment %}
+<section class="job_listing">
+  <h1 class="sales_heading_1" data-aos="fade-up">Latest Job Listing</h1>
+  <div class="job_listing_cards">
+  <div class="sub_job_listing" data-aos="fade-up">
+    <span>
+      <img src="/static/3.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+                                       <span><h2>Vashi Navi Mumbai</h2></span>
+      <span><b>Qualification - Bachelor Degree</b></span>
+      <span><b>Experience 0 2year</b></span>                                
+      <h1>Sales Marketing</h1>
+      <p>Sales marketing customers, provide product information, and drive sales while maintaining a positive shopping experience and store presentation</p>
+      </span>
+      <span>                                  
+        <li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+        <li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+        <li><i class="fa-solid fa-check"></i> Insurance Benifits</li> 
+        <li><i class="fa-solid fa-check"></i> 10k 15k</li>             
+      </span>
+      <a href="https://docs.google.com/forms/d/13tabX0XdKmmtLy86ZLYsXFPpQSo_T789FKoKkXBJYvQ/prefill"><button class="Apply_now_btn" id="Apply_now_btn_1">Apply Now</button></a>
+  </div>
+  <div class="sub_job_listing" data-aos="fade-up">
+    <img src="/static/2.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+    <span><h2>Vashi Navi Mumbai</h2></span>
+<span><b>Qualification - MBA</b></span>
+<span><b>Experience 3 5year</b></span>                                
+<h1>Product Manager</h1>
+<p> Drive product strategy, development, and innovation for ICICI insurance products. Achieve growth and profitability targets.</p>
+</span>
+<span>                                  
+<li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+<li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+<li><i class="fa-solid fa-check"></i> Insurance Benifits</li>
+<li><i class="fa-solid fa-check"></i> 50k 60k</li>                 
+</span>
+<a href="https://docs.google.com/forms/d/1HqXMBZ0fUTh_RkTNe3EHUf1MDTuIewsVctCeLDsRSUA/prefill"><button class="Apply_now_btn">Apply Now</button></a>
+  </div>
+  <div class="sub_job_listing" data-aos="fade-up">
+    <img src="/static/3.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+    <span><h2>Prabhadevi Mumbai</h2></span>
+<span><b>Qualification - Bachelor Degree In IT</b></span>
+<span><b>Experience 0 2years</b></span>                                
+<h1>IT Analyst</h1>
+<p>Support IT operations, troubleshoot issues, and enhance systems to ensure smooth insurance operations.</p>
+</span>
+<span>                                  
+<li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+<li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+<li><i class="fa-solid fa-check"></i> Insurance Benifits</li>
+<li><i class="fa-solid fa-check"></i> 20k 25k</li>                 
+</span>
+<a href="https://docs.google.com/forms/d/16bh1H_LU1X1cBHrA_pAKkvZIGU4MFawAUvEQ6Su8Tzc/prefill"><button class="Apply_now_btn" id="Apply_now_btn_1">Apply Now</button></a>
+  </div>
+  <div class="sub_job_listing" data-aos="fade-up">
+    <img src="/static/2.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+    <span><h2>Vasai Mumbai</h2></span>
+<span><b>Qualification - Bachelor Degree</b></span>
+<span><b>Experience 0 2years</b></span>                                
+<h1>BDA</h1>
+<p>Drive sales and revenue growth through client acquisition and relationship management in the insurance sector.</p>
+</span>
+<span>                                  
+<li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+<li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+<li><i class="fa-solid fa-check"></i> Insurance Benifits</li>
+<li><i class="fa-solid fa-check"></i> 15K 20K</li>                
+</span>
+<a href="https://docs.google.com/forms/d/1Tc5lliwTvkZuVWyCxhBQwD5doR5_m4J_yTPio85udUA/prefill"><button class="Apply_now_btn">Apply Now</button></a>
+  </div>
+</div>
+<a href="/joblist"><button class="job_lsiting_brrows_btn" data-aos="fade-up">Brows More Jobs</button></a>
+</section>
+{% comment %} job_list_contact_form {% endcomment %}
+<section class="job_list_contact_us">
+    <form method="POST" action="/joblist">
+        {% csrf_token %}
+        <div class="job_list_form">
+            <form action="">
+                <input type="text" class="username" placeholder="name" name="fname" required data-aos="fade-up"><br>
+                <input type="email" class="email" placeholder="Email" name="email" required data-aos="fade-up"><br>
+                <input type="phone" class="phone" placeholder="Mobile No" name="phone" required data-aos="fade-up"><br>
+                <input type="submit" class="job_list_form_btn" data-aos="fade-up"><br>
+            </form>
+        </div>
+    </form>
+</section>
+
+{% comment %} testimonial {% endcomment %}
+<section class="testimonial text-center">
+  <div class="container">
+
+      <div class="heading white-heading"data-aos="fade-up">
+          What Our Client Say
+      </div>
+      <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+       
+          <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                  <div class="testimonial4_slide">
+                      <img src="/static/male-user-2.png" class="img-circle img-responsive" />
+                      <p>JobNeed Company is a dynamic and innovative employment solutions provider. With a commitment to connecting job seekers with their dream careers and helping businesses find top talent, JobNeed is a trusted partner in the world of recruitment. Their extensive network and personalized approach make them a go-to resource for job seekers and employers alike.</p>
+                      <h4>Lucky Singh</h4>
+                      <h2 class="testimonial_founder_name">Game Assassin</h2>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="testimonial4_slide">
+                      <img src="/static/female-user-1.png" class="img-circle img-responsive" />
+                      <p>Jobneed is a game-changer in the job market. Their platform streamlined my job search and connected me with fantastic opportunities that matched my skills and aspirations. Their efficient and friendly team provided invaluable support throughout the process. I'm grateful to Jobneed for helping me secure an exciting career move. Exceptional service!</p>
+                      <h4>Anna Bekar</h4>
+                      <h2 class="testimonial_founder_name">Webyte</h2>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="testimonial4_slide">
+                      <img src="/static/male-user-3.png" class="img-circle img-responsive" />
+                      <p>Jobneed is an exceptional company! Their commitment to matching skilled individuals with the perfect job opportunities is truly commendable. Their platform is user-friendly, and their team is incredibly supportive. Thanks to Jobneed, I found my dream job, and I couldn't be happier with the results. Highly recommended! do visit for exceptional work</p>
+                      <h4>Siddhesh Yadav</h4>
+                      <h2 class="testimonial_founder_name">Gurukrispa Catering</h2>
+                  </div>
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+          </a>
+      </div>
+  </div>
+</section>
+   {% comment %} footer  {% endcomment %}
+   <footer >
+    <div class="footer">
+     <div class="sub-footer"data-aos="fade-up">
+      <img src="static/footerlogo.png" alt="" data-aos="fade-up">
+      <p class="footerlogo_slogan">WE MAKE YOUR CAREER BETTER</p>
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <h4 class="sub-footer-heading">Nevigation</h4>
+      <li><a href="">Home</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">About Us</a></li>
+      <li><a href="">Contact Us</a></li>
+      
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <h4 class="sub-footer-heading">Quick Links</h4>
+      <li><a href="">Facebook</a></li>
+      <li><a href="">Instagram</a></li>
+     <li><a href="">Linkedin</a></li>
+      <li><a href="">Twitter</a></li>
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <h4 class="sub-footer-heading">Services</h4>
+      <li><a href="">Home</a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href="">Leadership</a></li>
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <a href=""><i class="fa-solid fa-location-dot"></i>
+      <p>302 Raghuleela mall vashi <br>
+        navi mumbai india </p></a>
+    </div>
+    <div class="sub-footer" data-aos="fade-up">
+      <a href="tel:+918689846571"><i class="fa-solid fa-phone"></i>
+      <p>+91 8689846571</p></a>
+    </div>
+    <div class="sub-footer" data-aos="fade-up">
+      <a href=""><i class="fa-solid fa-envelope"></i>
+      <p>jobneed@gmail.com</p></a>
+    </div>
+    <div class="sub-footer" data-aos="fade-up">
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="copyright">
+      <h6>&#169;2023 Job@Need | All Rights Reserved</h6>
+    </div>
+  </footer>
+{% comment %} aos script {% endcomment %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 100,
+    duration:800
+   });
+   
+{% endblock body %}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     {% comment %} aaos aanimation on scroll cnd{% endcomment %}
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      {% comment %} favicon {% endcomment %}
+     <link rel="shortcut icon" href="/static/12.png" type="image/x-icon">
+  </head>
+  <body>
+    {% comment %} navbar {% endcomment %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="{% url 'index' %}"><img src="static/footerlogo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="\joblist">Job List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="\about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="\contact">Contact Us</a>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         <a href=""><button class="btn btn-success my-2 my-sm-0 m-2" type="submit">Admin</button></a>
+        </form>
+      </div>
+    </nav>
+    {% comment %} bg_image {% endcomment %}
+    <div class="homepage">
+      <div class="homepage_bg_img">
+        <div class="homepage_heading" data-aos="fade-up">
+          <h1>LETS START <br>
+            YOUR CAREER <br>
+             HERE,</h1>
+             <div class="hr_line">
+  
+             </div>
+             <a href="/about"><button class="Heading_btn" data-aos="fade-up">Learn More</button></a>
+      </div>
+      </div>
+    </div>
+    {% comment %} homepage_business_slide {% endcomment %}
+   <section class="business">
+    <div class="sub_business" data-aos="fade-up">
+      <h3>Our Partners</h3>
+      <p>ICICI Business Partners forge strong bonds, fostering growth, trust, and mutual success in financial collaboration.</p>
+      <button class="business_btn">Learn More</button>
+    </div>
+     <div class="sub_business" data-aos="fade-up"> 
+      <img src="/static/1.png" alt="">
+    </div>
+    <div class="sub_business" data-aos="fade-up">
+      <img src="/static/2.png" alt="">
+    </div>
+    <div class="sub_business" data-aos="fade-up">
+      <img src="/static/3.png" alt="">
+    </div>
+  </section>
+     {% comment %} homepage_3cards {% endcomment %}
+  <section class="homepage_3cards"> 
+    <div class="homepage_3sub_cards" data-aos="fade-up">
+      <i class="fa-solid fa-users-line"></i>
+      <h4><b>Our Partners</b></h4>
+      <p>ICICI Bank partners foster financial growth through diverse collaborations.</p>
+      <button class="homepage_3cards_btn"><i class="fa-solid fa-arrow-right"></i> See More</button>
+    </div>
+    <div class="homepage_3sub_cards" id="homepage_3sub_middle_card" data-aos="fade-up">
+      <i class="fa-regular fa-note-sticky"></i>
+      <h4><b>Our Portal</b></h4>
+      <p>ICICI Bank job portals connect talent with banking career opportunities.</p>
+      <button class="homepage_3cards_btn"><i class="fa-solid fa-arrow-right"></i> See More</button>
+    </div>
+    <div class="homepage_3sub_cards" data-aos="fade-up">
+      <i class="fa-solid fa-user-graduate"></i>
+      <h4><b>Careers Guidance</b></h4>
+      <p>ICICI Bank provides valuable career guidance for aspiring professionals.</p>
+      <button class="homepage_3cards_btn"><i class="fa-solid fa-arrow-right"></i> See More</button>
+    </div>
+  </section>
+  {% comment %} business women {% endcomment %}
+  <section class="business_women">
+    <div class="sub_business_women1"  data-aos="fade-up">
+      <img src="/static/4.jpg" alt="">
+    </div>
+    <div class="sub_business_women2" data-aos="fade-up">
+      <img src="/static/5.jpg" alt="">
+    </div>
+    <div class="sub_business_women" data-aos="fade-up">
+      <h1>Making Dreams And Aspirations Come True</h1>
+      <p>Parenting is a rewarding job, offering boundless love, lifelong learning, and the chance to shape future generations. The joy of raising happy, compassionate children is an enduring source of motivation.</p>
+    </div>
+  </section>
+  {% comment %} counting numbers cards {% endcomment %}
+  <section class="counter_numbers">
+    <div class="sub_counter_numbers1" data-aos="fade-up">
+      <h1>More Jobs evals Better World</h1>
+      <p>ICICI Bank job portals connect talent with banking career opportunities.</p>
+      <button class="counter_numbers_btn" data-aos="fade-up">Learn More</button>
+    </div>
+    <div class="sub_counter_numbers2" data-aos="fade-up">
+      <i class="fa-regular fa-thumbs-up fa-beat-fade"></i>
+      <h2 class="count">25</h2>
+      <h5>Experience</h5>
+    </div>
+    <div class="sub_counter_numbers3" data-aos="fade-up">
+      <i class="fa-solid fa-users-rays fa-beat-fade"></i>
+      <h2 class="count">70</h2>
+      <h5>Expert Trainers</h5>
+    </div>
+    <div class="sub_counter_numbers4" data-aos="fade-up">
+      <i class="fa-solid fa-building fa-beat-fade" style="color: #0d0d0c;"></i>
+      <h2 class="count">100</h2>
+      <h5>Companies</h5>
+    </div>
+  </section>
+  {% comment %} job listing {% endcomment %}
+  <section class="job_listing">
+    <h1 class="sales_heading_1" data-aos="fade-up">Latest Job Listing</h1>
+    <div class="job_listing_cards">
+    <div class="sub_job_listing" data-aos="fade-up">
+      <span>
+        <img src="/static/3.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+                                         <span><h2>Vashi Navi Mumbai</h2></span>
+        <span><b>Qualification - Bachelor Degree</b></span>
+        <span><b>Experience 0 2year</b></span>                                
+        <h1>Sales Marketing</h1>
+        <p>Sales marketing customers, provide product information, and drive sales while maintaining a positive shopping experience and store presentation</p>
+        </span>
+        <span>                                  
+          <li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+          <li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+          <li><i class="fa-solid fa-check"></i> Insurance Benifits</li> 
+          <li><i class="fa-solid fa-check"></i> 10k 15k</li>             
+        </span>
+        <a href="https://docs.google.com/forms/d/13tabX0XdKmmtLy86ZLYsXFPpQSo_T789FKoKkXBJYvQ/prefill"><button class="Apply_now_btn" id="Apply_now_btn_1">Apply Now</button></a>
+    </div>
+    <div class="sub_job_listing" data-aos="fade-up">
+      <img src="/static/2.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+      <span><h2>Vashi Navi Mumbai</h2></span>
+<span><b>Qualification - MBA</b></span>
+<span><b>Experience 3 5year</b></span>                                
+<h1>Product Manager</h1>
+<p> Drive product strategy, development, and innovation for ICICI insurance products. Achieve growth and profitability targets.</p>
+</span>
+<span>                                  
+  <li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+  <li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+  <li><i class="fa-solid fa-check"></i> Insurance Benifits</li>
+  <li><i class="fa-solid fa-check"></i> 50k 60k</li>                 
+</span>
+<a href="https://docs.google.com/forms/d/1HqXMBZ0fUTh_RkTNe3EHUf1MDTuIewsVctCeLDsRSUA/prefill"><button class="Apply_now_btn">Apply Now</button></a>
+    </div>
+    <div class="sub_job_listing" data-aos="fade-up">
+      <img src="/static/3.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+      <span><h2>Prabhadevi Mumbai</h2></span>
+<span><b>Qualification - Bachelor Degree In IT</b></span>
+<span><b>Experience 0 2years</b></span>                                
+<h1>IT Analyst</h1>
+<p>Support IT operations, troubleshoot issues, and enhance systems to ensure smooth insurance operations.</p>
+</span>
+<span>                                  
+  <li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+  <li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+  <li><i class="fa-solid fa-check"></i> Insurance Benifits</li>
+  <li><i class="fa-solid fa-check"></i> 20k 25k</li>                 
+</span>
+<a href="https://docs.google.com/forms/d/16bh1H_LU1X1cBHrA_pAKkvZIGU4MFawAUvEQ6Su8Tzc/prefill"><button class="Apply_now_btn" id="Apply_now_btn_1">Apply Now</button></a>
+    </div>
+    <div class="sub_job_listing" data-aos="fade-up">
+      <img src="/static/2.png" alt=""> <span class="icici_tag">ICICI LOMBARD</span>
+      <span><h2>Vasai Mumbai</h2></span>
+<span><b>Qualification - Bachelor Degree</b></span>
+<span><b>Experience 0 2years</b></span>                                
+<h1>BDA</h1>
+<p>Drive sales and revenue growth through client acquisition and relationship management in the insurance sector.</p>
+</span>
+<span>                                  
+  <li><i class="fa-solid fa-check"></i> Job Timing 10 am To 7PM</li>       
+  <li><i class="fa-solid fa-check"></i> 2 Week off</li> 
+  <li><i class="fa-solid fa-check"></i> Insurance Benifits</li>
+  <li><i class="fa-solid fa-check"></i> 15K 20K</li>                
+</span>
+<a href="https://docs.google.com/forms/d/1Tc5lliwTvkZuVWyCxhBQwD5doR5_m4J_yTPio85udUA/prefill"><button class="Apply_now_btn">Apply Now</button></a>
+    </div>
+  </div>
+  <a href="/joblist"><button class="job_lsiting_brrows_btn" data-aos="fade-up">Brows More Jobs</button></a>
+  </section>
+  {% comment %} testimonial  {% endcomment %}
+  
+  <section class="testimonial text-center">
+    <div class="container">
+
+        <div class="heading white-heading" data-aos="fade-up">
+            What Our Client Say
+        </div>
+        <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+         
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="testimonial4_slide">
+                        <img src="/static/male-user-2.png" class="img-circle img-responsive" />
+                        <p>JobNeed Company is a dynamic and innovative employment solutions provider. With a commitment to connecting job seekers with their dream careers and helping businesses find top talent, JobNeed is a trusted partner in the world of recruitment. Their extensive network and personalized approach make them a go-to resource for job seekers and employers alike.</p>
+                        <h4>Lucky Singh</h4>
+                        <h2 class="testimonial_founder_name">Game Assassin</h2>
+                    </div>
+                </div>
+                <div class="carousel-item" >
+                    <div class="testimonial4_slide">
+                        <img src="/static/female-user-1.png" class="img-circle img-responsive" />
+                        <p>Jobneed is a game-changer in the job market. Their platform streamlined my job search and connected me with fantastic opportunities that matched my skills and aspirations. Their efficient and friendly team provided invaluable support throughout the process. I'm grateful to Jobneed for helping me secure an exciting career move. Exceptional service!</p>
+                        <h4>Anna Bekar</h4>
+                        <h2 class="testimonial_founder_name">Webyte</h2>
+                    </div>
+                </div>
+                <div class="carousel-item" >
+                    <div class="testimonial4_slide">
+                        <img src="/static/male-user-3.png" class="img-circle img-responsive" />
+                        <p>Jobneed is an exceptional company! Their commitment to matching skilled individuals with the perfect job opportunities is truly commendable. Their platform is user-friendly, and their team is incredibly supportive. Thanks to Jobneed, I found my dream job, and I couldn't be happier with the results. Highly recommended! do visit for exceptional work</p>
+                        <h4>Siddhesh Yadav</h4>
+                        <h2 class="testimonial_founder_name">Gurukrispa Catering</h2>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+   {% comment %} footer  {% endcomment %}
+    <footer >
+    <div class="footer">
+     <div class="sub-footer"data-aos="fade-up">
+      <img src="static/footerlogo.png" alt="" data-aos="fade-up">
+      <p class="footerlogo_slogan">WE MAKE YOUR CAREER BETTER</p>
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <h4 class="sub-footer-heading">Nevigation</h4>
+      <li><a href="">Home</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">About Us</a></li>
+      <li><a href="">Contact Us</a></li>
+      
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <h4 class="sub-footer-heading">Quick Links</h4>
+      <li><a href="">Facebook</a></li>
+      <li><a href="">Instagram</a></li>
+     <li><a href="">Linkedin</a></li>
+      <li><a href="">Twitter</a></li>
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <h4 class="sub-footer-heading">Services</h4>
+      <li><a href="">Home</a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href="">Leadership</a></li>
+     </div>
+     <div class="sub-footer" data-aos="fade-up">
+      <a href=""><i class="fa-solid fa-location-dot"></i>
+      <p>302 Raghuleela mall vashi <br>
+        navi mumbai india </p></a>
+    </div>
+    <div class="sub-footer" data-aos="fade-up">
+      <a href="tel:+918689846571"><i class="fa-solid fa-phone"></i>
+      <p>+91 8689846571</p></a>
+    </div>
+    <div class="sub-footer" data-aos="fade-up">
+      <a href=""><i class="fa-solid fa-envelope"></i>
+      <p>jobneed@gmail.com</p></a>
+    </div>
+    <div class="sub-footer" data-aos="fade-up">
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="copyright">
+      <h6>&#169;2023 Job@Need | All Rights Reserved</h6>
+    </div>
+  </footer>
+	<script src="index.js"></script>
+  
+{% comment %} bootstrap cdn scripts {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% comment %} counter up cdn scripts {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $('.count').counterUp({
+    delay: 10,
+    time: 1000
+});
+</script>
+{% comment %} aos script {% endcomment %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 100,
+    duration:800
+   });
+</script>
+<!--Start of Conferbot Script-->
+<script type="text/javascript">
+  (function (d, s, id) {
+    var js,
+      el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    // Initializes the widget when the script is ready
+    js.onload = function () {
+        var w = window.ConferbotWidget("65046ef795980d8bac5c6bcd", "live_chat");
+    };
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+</body>
+</html>

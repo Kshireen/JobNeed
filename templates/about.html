@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}About Us{% endblock title %}
+{% block body %}
+ {% comment %} aaos aanimation on scroll cnd{% endcomment %}
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<section class="about_us_bg_img">
+  <h1  data-aos="fade-up">About Us</h1>
+</section>
+
+  {% comment %} homepage_business_slide {% endcomment %}
+  <section class="business">
+    <div class="sub_business" data-aos="fade-up">
+      <h3>Our Partners</h3>
+      <p>ICICI Business Partners forge strong bonds, fostering growth, trust, and mutual success in financial collaboration.</p>
+      <button class="business_btn">Learn More</button>
+    </div>
+     <div class="sub_business" data-aos="fade-up"> 
+      <img src="/static/1.png" alt="">
+    </div>
+    <div class="sub_business" data-aos="fade-up">
+      <img src="/static/2.png" alt="">
+    </div>
+    <div class="sub_business" data-aos="fade-up">
+      <img src="/static/3.png" alt="">
+    </div>
+  </section>
+{% comment %} About_us {% endcomment %}
+<section class="about_us">
+  <div class="sub_about_us"  data-aos="fade-up">
+    <h1>Our Mission</h1>
+    <p>JobNeed Company is dedicated to empowering individuals by connecting them with meaningful employment opportunities. Our mission is to foster career growth and prosperity, bridging the gap between job seekers and employers through innovative solutions. We are committed to promoting inclusivity, diversity, and professional development in the workplace, striving to make a positive impact on people's lives and the organizations we serve. At JobNeed, we believe that every person deserves a fulfilling career path, and we work tirelessly to make this vision a reality.</p>
+  </div>
+  <div class="sub_about_us">
+    <img src="/static/8.jpg" alt="" data-aos="fade-up">
+  </div>
+  <div class="sub_about_us"  data-aos="fade-up">
+    <h1>Our Story</h1>
+    <p>In 2018, JobNeed was born from a vision to revolutionize the job market. With a small but passionate team, we set out to connect job seekers and employers in more meaningful ways. Over the years, our commitment to innovation, inclusivity, and professional growth has transformed JobNeed into a thriving platform. We've helped thousands of individuals find their dream careers while assisting companies in building diverse, dynamic teams. Today, we continue to rewrite the story of employment, creating opportunities and shaping futures.</p>
+  </div>
+  <div class="sub_about_us">
+    <img src="/static/9.jpg" alt="" data-aos="fade-up">
+  </div>
+  <div class="sub_about_us"  data-aos="fade-up">
+    <h1>Our History</h1>
+    <p>JobNeed's history, dating back to 2018, embodies a transformative journey in the job market. From humble beginnings, we've evolved into a catalyst for change, connecting job seekers and employers with a pioneering spirit. Over time, our innovation-driven platform has enabled countless individuals to unlock their career potential and assisted businesses in building thriving teams. Our history propels us forward, committed to reshaping the world of employment and ensuring that every step in one's career journey is a step toward growth and prosperity.</p>
+  </div>
+  <div class="sub_about_us">
+    <img src="/static/10.jpg" alt="" data-aos="fade-up">
+  </div>
+</section> 
+{% comment %} o_list_contact_form {% endcomment %}
+<section class="job_list_contact_us">
+  <div class="job_list_form">
+      <form action="">
+          <input type="text" class="username" placeholder="name" required  data-aos="fade-up"><br>
+          <input type="email" class="email" placeholder="Email"  data-aos="fade-up"><br>
+          <input type="phone" class="phone" placeholder="Mobile No"  data-aos="fade-up"><br>
+          <input type="submit" class="job_list_form_btn"  data-aos="fade-up"><br>
+      </form>
+  </div>
+</section>
+ {% comment %} footer  {% endcomment %}
+ <footer >
+  <div class="footer">
+   <div class="sub-footer"data-aos="fade-up">
+    <img src="static/footerlogo.png" alt="" data-aos="fade-up">
+    <p class="footerlogo_slogan">WE MAKE YOUR CAREER BETTER</p>
+   </div>
+   <div class="sub-footer" data-aos="fade-up">
+    <h4 class="sub-footer-heading">Nevigation</h4>
+    <li><a href="">Home</a></li>
+    <li><a href="">Services</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="">Contact Us</a></li>
+    
+   </div>
+   <div class="sub-footer" data-aos="fade-up">
+    <h4 class="sub-footer-heading">Quick Links</h4>
+    <li><a href="">Facebook</a></li>
+    <li><a href="">Instagram</a></li>
+   <li><a href="">Linkedin</a></li>
+    <li><a href="">Twitter</a></li>
+   </div>
+   <div class="sub-footer" data-aos="fade-up">
+    <h4 class="sub-footer-heading">Services</h4>
+    <li><a href="">Home</a></li>
+    <li><a href="">Contact Us</a></li>
+    <li><a href="">Leadership</a></li>
+   </div>
+   <div class="sub-footer" data-aos="fade-up">
+    <a href=""><i class="fa-solid fa-location-dot"></i>
+    <p>302 Raghuleela mall vashi <br>
+      navi mumbai india </p></a>
+  </div>
+  <div class="sub-footer" data-aos="fade-up">
+    <a href="tel:+918689846571"><i class="fa-solid fa-phone"></i>
+    <p>+91 8689846571</p></a>
+  </div>
+  <div class="sub-footer" data-aos="fade-up">
+    <a href=""><i class="fa-solid fa-envelope"></i>
+    <p>jobneed@gmail.com</p></a>
+  </div>
+  <div class="sub-footer" data-aos="fade-up">
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-twitter"></i></a>
+    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+  </div>
+  </div>
+  <div class="copyright">
+    <h6>&#169;2023 Job@Need | All Rights Reserved</a></h6>
+  </div>
+</footer>
+{% comment %} aos script {% endcomment %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 100,
+    duration:800
+   });
+{% endblock body %}
